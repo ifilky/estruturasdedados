@@ -54,6 +54,14 @@ No* pop(No **topo){
     }
 }
 
+void imprimir_pilha(No *topo) {
+    printf("\n\n--------------- PILHA ---------------\n\n");
+    while (topo){
+        imprimir_pessoa(topo->p);
+        topo = topo->proximo;
+    }
+    printf("\n\n--------------- FIM DA PILHA ---------------\n\n");
+}
 
 int main() {
 
@@ -81,7 +89,7 @@ int main() {
             }
             break;
         case 3:
-
+            imprimir_pilha(topo);
             break; 
         default:
             if(opcao != 0) {
